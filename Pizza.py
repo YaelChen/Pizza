@@ -17,6 +17,7 @@ with open("PizzaMenu.txt", "w") as menu:
 * Thank you!\n""")
 
 
+# makes a dict out of the menu options:
 with open("PizzaMenu.txt") as menu:
     menu_dict = {}
     for line in menu:
@@ -125,9 +126,9 @@ def main():
 
     class_dict = {1: Classic, 2: Margherita, 3: FarmersPizza, 4: PlainPizza, 11: Olives, 12: Mushrooms, 13: GoatCheese, 14: Tuna, 15: Onions, 16: Corn}
 
-    code = input("Please choose a basic pizza: ")
+    code = input("Please choose the number of a basic pizza: ")
     while code not in ["1", "2", "3", "4"]:
-        code = input("enter a valid basic pizza: ")
+        code = input("enter a valid number from 1-4 for the pizza base: ")
 
     order = class_dict[int(code)]()
 
